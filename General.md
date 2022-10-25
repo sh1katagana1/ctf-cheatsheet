@@ -15,4 +15,25 @@ mysql -u victim-user -p
 ```
 -u: specify a username \
 -p: tell the command to prompt to enter the password \
-This would then prompt you to put in the password. 
+This would then prompt you to put in the password. Once connected, it will give you a mysql prompt and there will likely be some instructions, like having to end commands with a semicolon. So to enumerate the databases:
+```
+show databases;
+```
+To make a database active, you put the use command followed by the name of the database:
+```
+use name-of-db;
+```
+This will put you in that database. To look at the tables:
+```
+show tables;
+```
+Lets say this command showed 4 tables, and one of them is called users, we first need to select it to view it:
+```
+SELECT * From users;
+```
+This should show the contents of that table, hopefully including the password.
+
+
+
+
+
