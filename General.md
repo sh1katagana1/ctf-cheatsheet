@@ -60,7 +60,8 @@ https://gtfobins.github.io/gtfobins/nano/ \
 Tells you what command to run for this. In this case it is: \
 sudo nano \
 ^R^X \
-reset; sh 1>&0 2>&0
+reset; sh 1>&0 2>&0 \
+So, lets say the file is called leroyjenkins.txt, you would **sudo nano leroyjenkins.txt** This would put you in the nano editor. Then, according to GTFOBins, you would do **ctrl+r** and then **ctrl+x** That would read the file then exit the file. Then you would type in **reset; sh 1>&0 2>&0** That should give you an elevated prompt. This happens because it does not drop the elevated privileges and may be used to access the file system, escalate or maintain privileged access.
 
 
 
