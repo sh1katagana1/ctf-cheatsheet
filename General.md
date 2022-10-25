@@ -13,6 +13,6 @@ Sometimes you may find database credentials in a config file of the victim machi
 ```
 mysql -u victim-user -p
 ```
--u: specify a username
--p: tell the command to prompt to enter the password
+-u: specify a username \
+-p: tell the command to prompt to enter the password \
 This would then prompt you to put in the password. 
