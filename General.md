@@ -33,6 +33,11 @@ SELECT * From users;
 ```
 This should show the contents of that table, hopefully including the password.
 
+## Bash History
+If you enumerate a home directory of a user, its always good to look for the bash history file for that user. This file will contain a history of commands run by that user, if they havent removed them. An example would be the sudo command. The user would type sudo, then their password when prompted. So the history file would likely show this. This file is a hidden file so you would need to list the directry with the ls -la command. Then you can do:
+```
+cat .bash_history
+```
 
 
 
