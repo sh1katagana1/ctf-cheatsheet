@@ -58,9 +58,9 @@ https://gtfobins.github.io \
 That site is handy to find privilege escalation techmiques. As an example, lets say you checked the victims sudo privileges and they can run the nano program as root. This page \
 https://gtfobins.github.io/gtfobins/nano/ \
 Tells you what command to run for this. In this case it is: \
-sudo nano \
+`sudo nano \
 ^R^X \
-reset; sh 1>&0 2>&0
+reset; sh 1>&0 2>&0`
 
 
 
