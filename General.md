@@ -39,6 +39,30 @@ If you enumerate a home directory of a user, its always good to look for the bas
 cat .bash_history
 ```
 
+## Switch User
+If the victim machine is Linux, and you have broken in as a non-privleged account, like www-data, you would like to escalate to a more privileged user. Lets say you found an admin user leroy and captured his credentials. If your currently in a terminal as www-data user, to switch to the leroy account:
+```
+su leroy
+```
+You will be prompted for the password, and once entered, you should see a prompt indicating you are leroy.
+
+## Sudo
+A standard user may be allowed to run certain programs as root, if the privileged account has put that ability into the sudoers file. To check what potential sudo privileges a user may have:
+```
+sudo -l
+```
+This would list what programs, if any, the user can run as root. Sometimes this alone is sufficient to get privileged escalation, by running a script using a particular program as root.
+
+## GTFOBins
+https://gtfobins.github.io \
+That site is handy to find privilege escalation techmiques. As an example, lets say you checked the victims sudo privileges and they can run the nano program as root. This page \
+https://gtfobins.github.io/gtfobins/nano/ \
+Tells you what command to run for this. In this case it is: \
+sudo nano \
+^R^X \
+reset; sh 1>&0 2>&0
+
+
 
 
 
