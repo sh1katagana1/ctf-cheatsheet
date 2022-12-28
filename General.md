@@ -55,13 +55,6 @@ SELECT * From users;
 This should show the contents of that table, hopefully including the password.
 
 
-## Switch User
-If the victim machine is Linux, and you have broken in as a non-privleged account, like www-data, you would like to escalate to a more privileged user. Lets say you found an admin user leroy and captured his credentials. If your currently in a terminal as www-data user, to switch to the leroy account:
-```
-su leroy
-```
-You will be prompted for the password, and once entered, you should see a prompt indicating you are leroy.
-
 ## Exploit Recon
 ### Searchsploit
 Exploitdb is a common site where you would look up exploits for specific software. Distros like Kali Linux include a command line version of this lookup with a tool called Searchsploit. Lets say you were looking for Apache Tomcat exploits, to give you a list of exploits, along with a truncated path to it:
@@ -101,5 +94,10 @@ sudo nano \
 reset; sh 1>&0 2>&0 \
 So, lets say the file is called leroyjenkins.txt, you would **sudo nano leroyjenkins.txt** This would put you in the nano editor. Then, according to GTFOBins, you would do **ctrl+r** and then **ctrl+x** Then you would type in **reset; sh 1>&0 2>&0** That should give you an elevated prompt. This happens because it does not drop the elevated privileges and may be used to access the file system, escalate or maintain privileged access.
 
-
+### Switch User
+If the victim machine is Linux, and you have broken in as a non-privleged account, like www-data, you would like to escalate to a more privileged user. Lets say you found an admin user leroy and captured his credentials. If your currently in a terminal as www-data user, to switch to the leroy account:
+```
+su leroy
+```
+You will be prompted for the password, and once entered, you should see a prompt indicating you are leroy.
 
