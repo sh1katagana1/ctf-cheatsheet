@@ -38,6 +38,25 @@ hydra -l chris -P /usr/share/wordlists/rockyou.txt -t 6 ftp://10.10.67.223
 -l is for when we know the username. If we choose to use a wordlist, it will be -L \
 -P is for a wordlist of passwords, in this case, rockyou.txt,. If we knew the password, we would use -p followed by the password \
 -t is the amount of threads you want to use, in this case 6. The free version of Hydra is speed throttled. 
+
+## File Recon
+## binwalk
+To view detailed information about a file
+```
+binwalk <name-of-file>
+```
+This is useful if you have a jpg file, but its actually a zip file. \
+Extract a file
+```
+binwalk -e file.png
+```
+
+## 7zip usage
+p7zip is somnething you can install to use 7zip via command line. To extract an archive
+```
+7z -x file.zip
+```
+
 ## FTP Usage
 To FTP into a server:
 ```
