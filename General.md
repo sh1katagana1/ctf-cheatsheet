@@ -9,7 +9,12 @@ nmap -n -Pn -p- <ip>
 ```
 -n: This is to disbale DNS recursion \
 -Pn: This is to disable pinging, basically assuming the machine is up and running, so no need to ping. This is handy if targets block ICMP \
--p-: This is to scan all ports
+-p-: This is to scan all ports- \
+I may need to get a bit more information so if stealth is not a factor, ill run an Agressive scan:
+```
+nmap -n -Pn -A -p- <ip>
+```
+-A is an Aggressive scan. Do note that this is extremely noisy and if stealth is your goal in a real life scenario, you likely would not use this. It combines 4 scan types into one. First it does a -sV scan (version scan) which tries to determine the exact version number of what is running on that port. It does a -O (OS scan) to try and determine the Operating System of the victim. It does a -sC which runs all the scripts from the Default category. These are generally safe to run, but always verify first. Lastly it does a Traceroute. So this Aggressive scan usually takes a while to run. 
 
 ## Python stable shell
 When an exploit only gives you an sh shell, this can sometimes be unstable and you would need to make it a BASH shell. To do that in Python:
