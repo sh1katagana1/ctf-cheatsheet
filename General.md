@@ -29,6 +29,16 @@ sudo -l
 ```
 This would list what programs, if any, the user can run as root. Sometimes this alone is sufficient to get privileged escalation, by running a script using a particular program as root.
 
+## Password Cracking
+### Hydra
+Hydra is a password cracker useful for bruteforcing protocols like ssh, ftp, etc. Here's an example of bruteforcing an FTP server
+```
+hydra -l chris -P /usr/share/wordlists/rockyou.txt -t 6 ftp://10.10.67.223
+```
+-l is for when we know the username. If we choose to use a wordlist, it will be -L \
+-P is for a wordlist of passwords, in this case, rockyou.txt,. If we knew the password, we would use -p followed by the password \
+-t is the amount of threads you want to use, in this case 6. The free version of Hydra is speed throttled. 
+
 ## MySql Usage
 Sometimes you may find database credentials in a config file of the victim machine. If its MySql, you can use this command:
 ```
