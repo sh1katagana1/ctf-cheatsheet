@@ -2,6 +2,15 @@
 
 **Description:** A list of commands, techniques and tooling I use to perform CTFs
 
+## NMAP
+I generally start all engagements with a basic nmap scan:
+```
+nmap -n -Pn -p- <ip>
+```
+-n: This is to disbale DNS recursion \
+-Pn: This is to disable pinging, basically assuming the machine is up and running, so no need to ping. This is handy if targets block ICMP \
+-p-: This is to scan all ports
+
 ## Python stable shell
 When an exploit only gives you an sh shell, this can sometimes be unstable and you would need to make it a BASH shell. To do that in Python:
 ```
