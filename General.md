@@ -2,7 +2,8 @@
 
 **Description:** A list of commands, techniques and tooling I use to perform CTFs
 
-## NMAP
+## Enumeration
+### Nmap
 I generally start all engagements with a basic nmap scan:
 ```
 nmap -n -Pn -p- <ip>
